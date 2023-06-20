@@ -1,8 +1,11 @@
 # Класс рыба
-from animal_class import Animal
+from .animal_class import Animal
+
+__all__ = ["Fish"]
 
 
 class Fish(Animal):
+    """Класс рыба"""
     def __init__(self, name: str, weight: int, age: int, fish_type: str):
         super().__init__(name, weight, age)
         self.fish_type = fish_type

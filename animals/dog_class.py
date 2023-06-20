@@ -1,8 +1,11 @@
 # Класс собака
-from animal_class import Animal
+from .animal_class import Animal
+
+__all__ = ["Dog"]
 
 
 class Dog(Animal):
+    """Класс собака"""
     def __init__(self, name: str, weight: int, age: int, dog_type: str):
         super().__init__(name, weight, age)
         self.dog_type = dog_type
@@ -14,4 +17,4 @@ class Dog(Animal):
         return "Gov"
 
     def __str__(self):
-        return f"{super().__str__()} {self.dog_type}"
+        return f"{super().__str__()}, {self.dog_type}"
